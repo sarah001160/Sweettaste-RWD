@@ -1,0 +1,1679 @@
+@import "normalize.scss";
+
+html,body{
+	font-size:20px;/*主要文字*/
+	font-family:Arial,微軟正黑體;
+	color:#3F5D45;
+	width:100%;/*瀏覽畫面強制百分百*/
+}
+@mixin mobile{
+	@media(min-width:320px)and(max-width:640px){
+		@content;
+	}
+}
+@mixin pad{
+	@media(min-width:641px)and(max-width:960px){
+		@content;
+	}
+}
+@mixin PC{
+	@media(min-width:961px)and(max-width:1280px){
+		@content;
+	}
+}
+@mixin text-hide{
+	text-indent:110%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.clearfix{
+	clear:both;
+}
+.icon-size{/*設定icon的大小*/
+	width:30px;
+	height:30px;
+	margin:0;
+}
+.font-set{
+	color:white;
+	font-weight:bold;
+	font-family:微軟正黑體,Arial;
+	font-size:20px;
+}
+
+.font-bold{
+	font-weight:bold;
+}
+.bg-secondcolor{
+	background:#FFE180;
+}
+
+/*---all.html 設定----------------------*/
+.wrap{
+	width:92%;
+	margin:0 auto;
+	@include PC{
+		max-width:92%;
+		margin:0 4%;
+	}
+	@include pad{
+		max-width:92%;
+		margin:0 4%;
+	}
+	
+	.header{
+		width:100%;
+		height:100px;
+		margin:0;
+		@include PC{
+			.b1{
+				display:none;
+			}
+			.logo{
+				box-sizing:border-box;
+				width:30%;
+				height:100px;
+				float:left;
+				a{
+					@include text-hide;
+					background-image:url(../img/logo-all-dark.png);
+					background-repeat:no-repeat;
+					background-position:center;
+					display:block;
+					width:100%;
+					height:100%;			
+				}
+			}
+			.shoppingcart{
+				box-sizing:border-box;
+				width:70%;
+				height:100px;
+				float:left;
+				img{
+					float:right;
+					margin:30px 0 0 0;
+				}
+				ul{
+					width:60%;
+					height:40%;
+					float:right;
+					margin:40px -70px 0 0;
+					padding:0;
+					li{
+						box-sizing:border-box;
+						width:23%;
+						height:100%;
+						display:inline-block;
+						a{
+							text-decoration:none;
+							margin:20px 0 0 30px;
+							color:#3F5D45;
+							font-weight:bold;
+							cursor:pointer;
+						}
+						a:hover{
+							color:orange;
+							transition:0.2s ease;
+						}
+					}
+				}
+			}
+		}
+		@include pad{
+			.b1{
+				display:none;
+			}
+			.logo{
+				box-sizing:border-box;
+				width:40%;
+				height:100px;
+				float:left;
+				a{
+					@include text-hide;
+					background-image:url(../img/logo-all-dark.png);
+					background-repeat:no-repeat;
+					background-position:center;
+					display:block;
+					width:100%;
+					height:100%;			
+				}
+			}
+			.shoppingcart{
+				box-sizing:border-box;
+				width:60%;
+				height:100px;
+				float:left;
+				img{
+					float:right;
+					margin:30px 0 0 0;
+				}
+				ul{
+					width:90%;
+					height:40%;
+					float:right;
+					margin:40px -70px 0 0;
+					padding:0;
+					li{
+						box-sizing:border-box;
+						width:23%;
+						height:100%;
+						display:inline-block;
+						a{
+							text-decoration:none;
+							margin:20px 0 0 30px;
+							color:#3F5D45;
+							font-weight:bold;
+							cursor:pointer;
+						}
+						a:hover{
+							color:orange;
+							transition:0.2s ease;
+						}
+					}
+				}
+				
+
+			}
+		}
+		@include mobile{
+			.b1{
+				box-sizing:border-box;
+				width:20%;
+				height:100px;
+				float:left;
+				img{
+					margin:30%;
+				}
+			}
+			.logo{
+				box-sizing:border-box;
+				width:60%;
+				height:100%;
+				float:left;
+				a{
+					@include text-hide;
+					background-image:url(../img/logo-all-dark.png);
+					background-repeat:no-repeat;
+					background-position:center;
+					display:block;
+					width:100%;
+					height:100%;		
+				}
+			}
+			.shoppingcart{
+				box-sizing:border-box;
+				width:20%;
+				height:100%;
+				float:left;
+				img{
+					margin:30%;
+					}
+				ul{
+					display:none;
+				}
+			}
+		}
+	}	
+	.content{
+		margin-top:5%;
+		margin-bottom:280px;
+		width:100%;
+		height:auto;
+		position:relative;
+		.hero{
+			width:100%;
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+		.cardgroup{
+			margin-bottom:500px;
+			@include mobile{
+				width:100%;
+				height:256px;
+				position:absolute;
+				margin:0;
+				display:flex;
+				flex-direction:row;
+				.cardgroup-today{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-popular{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+						
+					}
+				}
+				.cardgroup-new{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-today:hover,.cardgroup-popular:hover,.cardgroup-new:hover{
+					background:#FFE180;
+					p{
+						color:#3F5D45;
+					}
+				}
+			}
+			@include pad{
+				width:83%;
+				height:256px;
+				margin:-140px 8% 0 8%;
+				display:flex;
+				position:absolute;
+				flex-direction:row;
+				.cardgroup-today{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-popular{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+						
+					}
+				}
+				.cardgroup-new{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:80px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-today:hover,.cardgroup-popular:hover,.cardgroup-new:hover{
+					background:#FFE180;
+					p{
+						color:#3F5D45;
+					}
+				}
+			}
+			@include PC{
+				width:83%;
+				height:256px;
+				margin:-140px 8% 0 8%;
+				display:flex;
+				position:absolute;
+				flex-direction:row;
+				.cardgroup-today{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:130px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-popular{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:130px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+						
+					}
+				}
+				.cardgroup-new{
+					width:33%;
+					height:100%;
+					position:relative;
+					background:#3F5D45;
+					opacity:1;
+					z-index:2;
+					margin-right:0.3%;
+					a{
+						width:100%;
+						height:100%;
+						img{
+							opacity:0.1;
+							width:100%;
+							height:100%;
+							z-index:1;
+						}
+						p{
+							position:absolute;
+							top:80px;
+							left:130px;
+							writing-mode:vertical-rl;
+							color:white;
+							font-weight:bold;
+						}
+					}
+				}
+				.cardgroup-today:hover,.cardgroup-popular:hover,.cardgroup-new:hover{
+					background:#FFE180;
+					p{
+						color:#3F5D45;
+					}
+				}
+			}
+			
+		}
+	}
+}
+@import "home-content.scss";
+@import "footer.scss";
+
+
+
+
+/*---product page設定------------------*/
+.content-product{
+	height:auto;
+	@include mobile{
+		box-sizing:border-box;
+		}
+	.wrap{
+		width:92%;
+		margin:0 4%;
+		.product-hero{
+			position:relative;
+			img{
+				box-sizing:border-box;
+				width:100%;
+			}
+			.hero-slogan{
+				width:12%;
+				height:80%;
+				position:absolute;
+				top:30px;
+				right:10%;
+				
+			}
+		}
+		.product-Area{
+			width:100%;
+			display:flex;	
+			flex-direction:row;
+			@include mobile{
+				display:flex;
+				flex-direction:column;
+			}
+			.classify{
+				width:30%;
+				height:auto;
+				margin-top:30px;
+				margin-right:30px;
+				font-size:25px;
+				@include mobile{
+					width:100%;
+				}
+				ul{
+					width:100%;
+					height:auto;
+					h1{
+						width:100%;
+						height:45px;
+						border:1px solid #EAF0ED;
+						padding-top:20px;
+						text-align:center;
+						background:#3F5D45;
+						color:#EAF0ED;
+					}
+					li{
+						width:100%;
+						height:55px;
+						border:1px solid #EAF0ED;
+						padding-top:10px;
+						text-align:center;
+						color:#3F5D45;
+						a{
+							display:block;
+							width:100%;
+							height:100%;
+							text-decoration:none;
+							color:#3F5D45;
+						}
+					}
+					li:hover,a:hover{
+						background:#3F5D45;
+						color:#EAF0ED;
+					}
+				}
+			
+			}
+			.product-group{
+				width:70%;
+				height:auto;
+				margin:20px auto;
+				@include mobile{
+					width:100%;
+				}
+				.product-card{
+					float:left;
+					border:1px solid #EAF0ED;
+					margin:10px 5px;
+					width:45%;
+					height:auto;
+					position:relative;
+					@include mobile{
+						float:none;
+						width:100%;
+					}
+					img{
+						width:100%;
+						height:315px;
+					}
+					.tag{
+						position:absolute;
+						top:0;
+						left:0;
+						width:30px;
+						height:100px;
+						padding-top:10px;
+						padding-right:10px;
+						background:#3F5D45;
+						color:white;
+						writing-mode:vertical-rl;
+					}
+					.outer-pricename{
+						width:100%;
+						height: 56px;
+						display:flex;
+						flex-direction:row;
+						border-bottom:1px solid #EAF0ED;
+						.d-name{
+							width:50%;
+							border-right:1px solid #EAF0ED;
+							h1{
+								text-align:center;
+								margin-top:20px;
+							}
+						}
+						.d-price{
+							width:50%;
+							p{
+								text-align:center;
+								margin-top:20px;
+						
+							}
+						}
+					
+					}
+					.addbtn{
+						width:100%;
+						height:65px;
+						background:#EAF0ED;
+						border:none;
+						cursor:pointer;
+						font-size:25px;
+						font-family:微軟正黑體;
+						font-weight:bold;
+						color:#3F5D45;
+					}
+					.addbtn:active{
+						background:#3F5D45;
+						color:#EAF0ED;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+/*----login page設定------------------*/
+.content-login{
+	.wrap{
+		width:96%;
+		height:auto;
+		margin:0 2%;
+		@include mobile{
+			width:100%;
+			margin:0;
+		}
+		.member-login{
+			width:390px;
+			height:380px;
+			margin:5% 0 10% 20%;
+			background:#3F5D45;
+			float:left;
+			position:relative;
+			@include mobile{
+				display:none;
+			}
+			@include pad{
+				width:40%;
+				margin:5% 0 10% 5%;
+			}
+			h1{
+				color:white;
+				font-size:30px;
+				font-weight:bold;
+				margin:10% 20% 10% 35%;
+
+			}
+			.l-account{
+				width:330px;
+				height:56px;
+				position:relative;
+				margin-bottom:20px;
+				margin-left:20px;
+				@include pad{
+					width:80%;
+				}
+				input{
+					box-sizing:border-box;
+					width:100%;
+					height:100%;
+					padding-left:40px;
+				}
+				.icon{
+					position:absolute;
+					top:10px;
+					left:8px;
+					img{
+						width:30px;
+						height:30px;
+					}
+				}
+			}
+			.l-password{
+				width:330px;
+				height:56px;
+				position:relative;
+				margin-bottom:20px;
+				margin-left:20px;
+				@include pad{
+					width:80%;
+				}
+				input{
+					box-sizing:border-box;
+					width:100%;
+					height:100%;
+					padding-left:40px;
+				}
+				.icon{
+					position:absolute;
+					top:10px;
+					left:8px;
+					img{
+						width:30px;
+						height:30px;
+					}
+				}
+
+			}
+			.tickbox{
+				width:30px;
+				height:30px;
+				margin-left:5%;
+			}
+			label{
+				color:white;
+				font-size:24px;
+			}
+			.presslogin{
+				width:100%;
+				height:65px;
+				border:none;
+				position:absolute;
+				left:0;
+				bottom:0;
+				background:#FFE180;
+				color:#3F5D45;
+				font-weight:bold;
+				font-size:24px;
+				font-family:微軟正黑體;
+				cursor:pointer;
+			}
+		}
+		.socialmedia{
+			width:390px;
+			height:350px;
+			margin:6% 6% 0 0;
+			background:#EAF0ED;
+			float:left;
+			@include mobile{
+				display:none;
+			}
+			@include pad{
+				width:40%;
+				margin:6% 0 0 0;
+			}
+			h1{
+				color:#8DA291;
+				font-size:30px;
+				font-weight:bold;
+				margin:10%;
+			}
+			.facebook,.google,.yahoo{
+				width:80%;
+				height:56px;
+				border:none;
+				margin-left:10%;
+				margin-bottom:20px;
+				background-repeat:no-repeat;
+				background-size:30%;
+				background-position:center center;
+			}
+			.facebook{
+				background-image:url(../img/ic-facebook-logotype.png);
+				
+			}
+			.google{
+				background-image:url(../img/ic-google.png);
+			}
+			.yahoo{
+				background-image:url(../img/ic-yahoo.png);
+			}
+		}
+		
+	}	
+	.setforMobile{
+			display:none;
+			@include mobile{
+				display:block;
+				width:100%;
+				h1{
+					display:block;
+					box-sizing:border-box;
+					width:100%;
+					height:50px;
+					padding:10% 30% 20% 25%;
+					background:#3F5D45;
+					color:white;
+					font-size:50px;
+					font-weight:bold;
+					margin:0;
+				}
+				.l-socialmedia{
+					background:#EAF0ED;
+					height:120px;
+					ul{
+						box-sizing:border-box;
+						width:90%;
+						height:auto;
+						padding-top:20px;
+						margin-left:20px;
+				
+						li{
+							float:left;
+							border:1px solid #EAF0ED;
+							width:30%;
+							height:36px;
+							padding-top:20px;
+							margin-left:2px;
+							margin-top:10px;
+							background:white;
+						}
+
+					}
+					
+				
+				}
+				.memberLogin{
+					width:100%;
+					height:auto;
+					background:#3F5D45;
+					padding-top:20px;
+					.l-account{
+						width:80%;
+						height:56px;
+						margin:0 10%;
+						position:relative;
+						input{
+							box-sizing:border-box;
+							width:100%;
+							height:100%;
+							padding-left:40px;
+						}
+						.icon{
+							position:absolute;
+							top:10px;
+							left:10px;
+							img{
+								width:30px;
+								height:30px;
+							}
+						}
+					}
+					.l-password{
+						width:80%;
+						height:56px;
+						margin:20px 10%;
+						position:relative;
+						input{
+							box-sizing:border-box;
+							width:100%;
+							height:100%;
+							padding-left:40px;
+						}
+						.icon{
+							position:absolute;
+							top:10px;
+							left:10px;
+							img{
+								width:30px;
+								height:30px;
+							}
+						}
+					}
+					.tickbox{
+						width:30px;
+						height:30px;
+						margin-left:10%;
+					}
+					label{
+						color:white;
+					}
+					.presslogin{
+						width:100%;
+						height:65px;
+						border:none;
+						cursor:pointer;
+						background:#FFE180;
+						color:#3F5D45;
+						font-weight:bold;
+						font-size:30px;
+						font-family:微軟正黑體;
+
+					}
+				}
+			}
+			
+	}
+}
+
+
+/*----shoppingcart page 設定--------*/
+.shoppingcart{
+	.wrap{
+		width:96%;
+		margin:0 auto;
+		@include mobile{
+			box-sizing:border-box;
+			width:99%;
+			margin:0;
+		}
+		@inlclude pad{
+			box-sizing:border-box;
+			width:99%;
+			margin:0;
+		}
+		.shoppingcart-cartList{
+			width:70%;
+			height:auto;
+			margin-bottom:50px;
+			float:left;
+			@include mobile{
+				box-sizing:border-box;
+				width:99%;
+				float:none;
+			}
+			@include pad{
+				box-sizing:border-box;
+				width:99%;
+				float:none;
+			}
+			h1{/*--您的購物車---*/
+				width:100%;
+				height:45px;
+				text-align: center;
+				font-size:24px;
+				padding-top:20px;
+				margin-bottom:50px;
+				background:#EAF0ED;
+			}
+			.l-list{/*--外框線,僅用來限制住內部div-*/
+				width:100%;
+				height:auto;
+				border:1px solid #EAF0ED;
+				padding-top:20px;
+				padding-bottom:20px;
+
+				.product-selfile{
+					width:19%;
+					height:110px;
+					float:left;	
+					@include mobile{
+						width:50%;
+						height:50%;
+					}
+					@include pad{
+						width:50%;
+						height:50%;
+					}
+				}
+				.nameQuantity{
+					width:60%;
+					height:auto;
+					float:left;
+					@include mobile{
+						width:50%;
+						height:120px;
+					}
+					@include pad{
+						width:50%;
+						height:120px;
+					}
+					.nameQuantity-name{
+						width:50%;
+						height:auto;
+						float:left;
+						@include mobile{
+							width:100%;
+						}
+						@include pad{
+							width:100%;
+						}
+
+						h1{
+							height:28px;
+							margin-top:20px;
+							background:white;
+						}
+						p{
+							height:28px;
+							margin-top:-50px;
+							text-align:center;
+						}
+					}
+					.nameQuantity-Quantity{
+						width:50%;
+						height:auto;
+						float:left;
+						@include mobile{
+							width:100%;
+						}
+						@include pad{
+							width:100%;
+						}
+						ul{
+							width:100%;
+							height:49px;
+							margin-top:20px;
+							li{
+								width:30%;
+								display:inline-block;
+								border:1px solid #EAF0ED;
+								margin-left:0px;
+								text-align:center;
+								a{
+									display:block;
+									width:100%;
+									text-decoration:none;
+									color:#3F5D45;
+									text-align:center;
+								}
+								a:hover{
+									background:#3F5D45;
+									color:white;
+								}
+							}
+						}
+					}
+				}
+				.totalprice{
+					width:15%;
+					height:20%;
+					float:left;
+					@include mobile{
+						width:100%;
+					}
+					p{
+						margin-top:20px;
+						height:50px;
+						@include mobile{
+							border-top:1px solid #EAF0ED;
+							border-bottom:1px solid #EAF0ED;
+							padding-top:20px;
+							margin-top:50px;
+							text-align: right;
+							font-weight:bold;
+						}
+						@include pad{
+							border-top:1px solid #EAF0ED;
+							border-bottom:1px solid #EAF0ED;
+							padding-top:20px;
+							margin-top:50px;
+							text-align: right;
+							font-weight:bold;
+						}
+					}
+				}
+				.delete-icon{
+					float:left;
+					width:5%;
+					height:5%;
+					margin-top:20px;
+					@include mobile{
+						display:none;
+					}
+					@include pad{
+						display:none;
+					}
+					img{
+						width:20px;
+						height:20px;
+					}
+				}
+			}
+		}
+		.h2-showsinmobile{
+			display: none;
+			@include mobile{
+				display:block;
+				font-size:30px;
+				text-align:center;
+				width:90%;
+				height:45px;
+				padding-top:20px;
+				margin:0 5%;
+				background: #EAF0ED;
+
+			}
+		}
+		.shoppingcart-bill{/*--訂單摘要--*/
+			width:28%;
+			height:auto;
+			margin-left:1%;
+			float:left;
+			background:#3F5D45;
+			color:white;
+			@include mobile{
+				box-sizing:border-box;
+				width:100%;
+				margin-bottom:20px;
+				float:none;
+				background:white;
+				color:#3F5D45;
+			}
+			@include pad{
+				box-sizing:border-box;
+				width:100%;
+				margin-bottom:20px;
+				float:none;
+				background:white;
+				color:#3F5D45;
+			}
+			h2{
+				width:80%;
+				height:50px;
+				border-bottom:1px solid white;
+				margin:10% 10% 0 10%;
+				text-align:center;
+				@include mobile{
+					display:none;
+				}	
+				@include pad{
+					display:none;
+				}			
+			}
+			ul{
+				li{
+					display:flex;
+					flex-direction: row;
+					margin:10px 10%;
+					h3{
+						width:70%;
+						text-align:left;
+					}
+					p{
+						width:30%;
+						text-align:right;
+					}
+				}
+			}
+			.paybill{
+				width:100%;
+				height:65px;
+				border:none;
+				background:#FFE180;
+				color:#3F5D45;
+				cursor:pointer;
+				text-align:center;
+				font-size:20px;
+				font-family:微軟正黑體;
+			}
+			.paybill:visited{
+				background:#3F5D45;
+				color:#FFE180;
+			}
+			.paybill:hover,.paybill:active{
+				background:#3F5D45;
+				color:#FFE180;
+			}
+		}
+	}
+}
+
+
+
+/*---checkout-1 page設定----------------*/
+.content-checkout1{
+	.wrap{
+		width:96%;
+		height:auto;
+		margin:0 auto;
+		@include mobile{
+			width:100%;
+			margin-left:-10%;
+			box-sizing:border-box;
+			
+		}
+		.formtofill{
+			width:460px;
+			height:auto;
+			padding:30px 30px 100px 30px;
+			margin-left:10%;
+			margin-bottom:50px;
+			color:white;
+			background:#3F5D45;
+			position:relative;
+			float:left;
+			@include mobile{
+				width:99%;
+				box-sizing:border-box;
+				float:none;
+			}
+			h1{
+				height:50px;
+				color:white;
+				font-size:36px;
+			}
+			.who{
+				display:flex;
+				flex-direction:row;
+				width:100%;
+				.lastname{
+					width:50%;
+					label{
+						width:95%;
+					}
+					input{
+						width:90%;
+						height:60px;
+					}
+				}
+				.givenname{
+					width:50%;
+					label{
+						width:90%;
+					}
+					input{
+						width:90%;
+						height:60px;
+					}
+				}
+			}
+			.phone{
+				width:95%;
+				margin-top:10px;
+				input{
+					width:99%;
+					height:60px;
+				}
+			}
+			.address{
+				width:95%;
+				margin-top:10px;
+				select{
+					width:49%;
+					height:60px;
+				}
+				.road{
+					width:99%;
+					height:60px;
+					margin-top:20px;
+				}
+			}
+			.formtofill-btn{
+				position:absolute;
+				bottom:0;
+				right:0;
+				left:0;
+				width:100%;
+				height:65px;
+				border:none;
+				color:#3F5D45;
+				font-size:24px;
+				font-family:微軟正黑體;
+			}
+			::placeholder{
+				color:#8DA291;
+			}
+		}
+		@import "billandshopList.scss";/*右手邊的表格之css另外存取,可重複使用*/
+	}
+
+}
+
+
+
+/*-------checkout-2 page 設定-------------*/
+.content-checkout2{
+	.wrap{
+		width:96%;
+		margin:0 auto;
+		@include mobile{
+			width:100%;
+			margin-left:-10%;
+			box-sizing:border-box;
+			
+		}
+		.formtofill{
+				width:460px;
+				height:auto;
+				padding:30px 30px 100px 30px;
+				margin-left:10%;
+				margin-bottom:50px;
+				background:#3F5D45;
+				position:relative;
+				float:left;
+				color:white;
+				@include mobile{
+					width:99%;
+					box-sizing:border-box;
+					float:none;
+				}
+				h1{
+					height:50px;
+					color:white;
+					font-size:36px;
+				}
+				.credit{
+					width:100%;
+					height:auto;
+					margin-bottom:20px;
+
+					.creditNo{
+						width:100%;
+						height:60px;
+					}
+				}
+				.whosecredit{
+					width:100%;
+					height:auto;
+					margin-bottom:20px;
+					label{
+						width:100%;
+					}
+					input{
+						width:48%;
+						height:60px;
+					}
+				}
+				.DL-credit{
+					width:100%;
+					select{
+						width:49%;
+						height:60px;
+					}
+				}
+				.credit-last3No{
+					width:100%;
+					margin-top:20px;
+					input{
+						height:60px;
+					}
+				}
+				.formtofill-btn{
+				position:absolute;
+				bottom:0;
+				right:0;
+				left:0;
+				width:100%;
+				height:65px;
+				border:none;
+				color:#3F5D45;
+				font-size:24px;
+				font-family:微軟正黑體;
+				}
+				::placeholder{
+					color:#8DA291;
+				}
+			}
+		@import "billandshopList.scss";/*右手邊的表格之css另外存取,可重複使用*/
+	}
+}
+
+
+
+/*----checkout-success page設定*/
+.content-checkout-success{
+	.wrap{
+		box-sizing:border-box;
+		width:92%;
+		margin:0 auto;
+		@include mobile{
+		width:100%;
+		margin:0;	
+		}
+		.hero{
+			width:100%;
+			height:auto;
+			position:relative;
+			img{
+				box-sizing: border-box;
+				width:100%;
+				height:auto;
+			}
+			.slogan{
+				position:absolute;
+				top:40%;
+				right:35%;
+				@include mobile{
+					top:35%;
+					right:10%;
+					left:25%;
+				}
+				@include pad{
+					top:35%;
+					left:30%;
+					right:30%;
+					bottom:30%;
+				}
+				img{
+					max-width:99%;
+					height:auto;
+					@include mobile{
+					width:70%;
+					}
+				
+				}
+			}
+			.goshopping-btn{
+				position:absolute;
+				top:60%;
+				left:35%;
+				right:40%;
+				width:300px;
+				height:65px;
+				color:#3F5D45;
+				border:none;
+				font-size:36px;
+				font-family:微軟正黑體;
+				@include mobile{
+					display:none;
+				}
+				@include pad{
+					position:absolute;
+					top:60%;
+					left:28%;
+					right:50%;
+				}
+			}
+			.goshopping-btn:hover{
+				background:#3F5D45;
+				color:#FFE180;
+			}
+		}
+		
+	}
+	.btn-showsinmobile{
+			display:none;
+			@include mobile{
+				display:block;
+			}
+			input{
+				@include mobile{
+				width:100%;
+				height:65px;
+				color:#3F5D45;
+				border:none;
+				font-size:36px;
+				font-family:微軟正黑體;
+				}
+			}
+			
+		}
+}
+
+
+
+/*----checkout3-1pag 設定--------------*/
+.content-checkout3-1{
+	.wrap{
+		width:96%;
+		margin:0 auto;
+		@include mobile{
+			width:100%;
+			margin-left:-10%;
+			box-sizing:border-box;
+			
+		}
+		.formtofill{
+				width:460px;
+				height:auto;
+				padding:30px 30px 100px 30px;
+				margin-left:10%;
+				margin-bottom:50px;
+				background:#3F5D45;
+				position:relative;
+				float:left;
+				color:white;
+				@include mobile{
+					width:99%;
+					box-sizing:border-box;
+					float:none;
+				}
+				h1{
+					height:50px;
+					color:white;
+					font-size:36px;
+				}
+				.invoice{
+					width:100%;
+					input{
+						width:48%;
+						height:60px;
+						border:3px solid white;
+						margin-left:-5px;
+						background:#3F5D45;
+						color:white;
+						font-size:20px;
+						font-family:微軟正黑體;
+					}
+					input:hover{
+						background:white;
+						color:#3F5D45;
+					}
+				}
+				.email{
+					margin-top:20px;
+					label{
+						width:100%;
+					}
+					input{
+						box-sizing:border-box;
+						width:100%;
+						height:50px;
+						padding-left: 30px;
+					}
+				}
+				.company-regisNo{
+					margin-top:20px;
+					label{
+						width:100%;
+					}
+					input{
+						box-sizing:border-box;
+						width:100%;
+						height:50px;
+						padding-left:30px;
+					}
+				}
+				.formtofill-btn{
+				position:absolute;
+				bottom:0;
+				right:0;
+				left:0;
+				width:100%;
+				height:65px;
+				border:none;
+				color:#3F5D45;
+				font-size:24px;
+				font-family:微軟正黑體;
+				}
+				::placeholder{
+					color:#8DA291;
+				}
+			}
+		@import "billandshopList.scss";/*右手邊的表格之css另外存取,可重複使用*/
+	}
+}
+
+/*------checkout3-2 page 設定-------*/
+.content-checkout3-2{
+	.wrap{
+		width:96%;
+		margin:0 auto;
+		@include mobile{
+			width:100%;
+			margin-left:-10%;
+			box-sizing:border-box;
+			
+		}
+		.formtofill{
+				width:460px;
+				height:auto;
+				padding:30px 30px 100px 30px;
+				margin-left:10%;
+				margin-bottom:50px;
+				background:#3F5D45;
+				position:relative;
+				float:left;
+				color:white;
+				@include mobile{
+					width:99%;
+					box-sizing:border-box;
+					float:none;
+				}
+				h1{
+					height:50px;
+					color:white;
+					font-size:36px;
+				}
+				.invoice{
+					width:100%;
+					input{
+						width:48%;
+						height:60px;
+						border:3px solid white;
+						margin-left:-5px;
+						background:#3F5D45;
+						color:white;
+						font-size:20px;
+						font-family:微軟正黑體;
+					}
+					input:hover{
+						background:white;
+						color:#3F5D45;
+					}
+				}
+				.address{
+					width:95%;
+					margin-top:10px;
+					select{
+						width:49%;
+						height:60px;
+					}
+					.road{
+						width:99%;
+						height:60px;
+						margin-top:20px;
+					}
+				}
+				
+				.company-regisNo{
+					margin-top:20px;
+					label{
+						width:100%;
+					}
+					input{
+						box-sizing:border-box;
+						width:95%;
+						height:50px;
+						padding-left:30px;
+					}
+				}
+				.formtofill-btn{
+				position:absolute;
+				bottom:0;
+				right:0;
+				left:0;
+				width:100%;
+				height:65px;
+				border:none;
+				color:#3F5D45;
+				font-size:24px;
+				font-family:微軟正黑體;
+				}
+				::placeholder{
+					color:#8DA291;
+				}
+			}
+		@import "billandshopList.scss";/*右手邊的表格之css另外存取,可重複使用*/
+	}
+}

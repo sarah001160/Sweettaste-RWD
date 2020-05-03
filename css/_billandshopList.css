@@ -1,0 +1,92 @@
+.formtofill {
+  width: 460px;
+  height: auto;
+  padding: 20px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+  background: green;
+  position: relative;
+  float: left; }
+  .formtofill .formtofill-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    border: none; }
+
+.Rightside {
+  float: left;
+  width: 310px;
+  margin-left: 5%; }
+  .Rightside .billing {
+    width: 300px;
+    border: 1px solid #EAF0ED;
+    margin-bottom: 20px;
+    height: auto;
+    color: #8DA291; }
+    .Rightside .billing h1 {
+      width: 100%;
+      height: 46px;
+      padding-top: 20px;
+      background: #EAF0ED;
+      text-align: center; }
+    .Rightside .billing ul li {
+      width: 100%;
+      height: 50px;
+      padding-top: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .Rightside .billing ul li h2 {
+        width: 50%;
+        text-align: center; }
+      .Rightside .billing ul li p {
+        width: 50%;
+        text-align: center; }
+  .Rightside .shopList {
+    width: 300px;
+    height: auto;
+    border: 1px solid #EAF0ED;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .Rightside .shopList h1 {
+      width: 100%;
+      height: 46px;
+      padding-top: 20px;
+      text-align: center;
+      color: #8DA291;
+      background: #EAF0ED; }
+    .Rightside .shopList ul {
+      width: 100%;
+      height: auto; }
+      .Rightside .shopList ul li {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        .Rightside .shopList ul li img {
+          width: 50%;
+          height: 100%; }
+        .Rightside .shopList ul li .product-tag {
+          width: 50%;
+          margin-left: 10px; }
+          .Rightside .shopList ul li .product-tag h2 {
+            margin-top: 10px;
+            width: 100%;
+            height: 40px; }
+          .Rightside .shopList ul li .product-tag p {
+            width: 100%;
+            height: 40px; }
